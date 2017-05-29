@@ -21,7 +21,8 @@ public class ItemRepositoryImpl implements ItemRepository {
 		if (null != cuisineType || budgetRange != null) {
 			if (null != cuisineType) {
 				items.forEach((id, item) -> {
-					if (cuisineType.equals(item.getCuisineType())) {
+
+					if (item.getCuisineType().name().equals(cuisineType.trim())) {
 						filteredItems.put(id, item);
 					}
 				});
