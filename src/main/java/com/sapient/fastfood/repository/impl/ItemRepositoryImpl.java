@@ -5,9 +5,9 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
+import com.sapient.fastfood.beans.Item;
 import com.sapient.fastfood.datastore.ItemStore;
 import com.sapient.fastfood.repository.ItemRepository;
-import com.sapient.fastfood.resource.Item;
 
 @Repository
 public class ItemRepositoryImpl implements ItemRepository {
@@ -35,6 +35,11 @@ public class ItemRepositoryImpl implements ItemRepository {
 			return items;
 		}
 
+	}
+
+	@Override
+	public Item getItem(Long itemId) {
+		return ItemStore.getItem(itemId);
 	}
 
 }

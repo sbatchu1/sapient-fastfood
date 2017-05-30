@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
+import com.sapient.fastfood.beans.Item;
 import com.sapient.fastfood.constant.CuisineType;
-import com.sapient.fastfood.resource.Item;
 
 public class ItemStore {
 
@@ -35,5 +35,9 @@ public class ItemStore {
 
 	public static Map<Long, Item> fetchAll() {
 		return ITEM_MAP;
+	}
+
+	public static Item getItem(Long itemId) {
+		return ITEM_MAP.get(itemId);
 	}
 }

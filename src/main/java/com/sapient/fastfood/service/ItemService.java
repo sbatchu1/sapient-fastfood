@@ -2,10 +2,10 @@ package com.sapient.fastfood.service;
 
 import java.util.List;
 
-import com.sapient.fastfood.resource.Item;
+import com.sapient.fastfood.dto.ItemDTO;
 
 public interface ItemService {
 
-	List<Item> fetchAll(String cuisineType, String budgetRange);
+	List<ItemDTO> fetchAll(String cuisineType, String budgetRange);
 
 }

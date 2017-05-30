@@ -1,4 +1,4 @@
-package com.sapient.fastfood.resource;
+package com.sapient.fastfood.beans;
 
 import com.sapient.fastfood.constant.CuisineType;
 
